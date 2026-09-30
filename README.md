@@ -1,57 +1,61 @@
-# Intelligent Research Copilot — Complete Agent
+# 🕵️ Intelligent Research Copilot
 
-A local-first AI research workspace for the Code Cubicle 6.0 PS-01 direction: natural-language requirement → planning → multi-source discovery → URL/file ingestion → evidence processing → verification → deduplication → structured dataset → report → knowledge graph → export.
+> **AI-powered research & intelligence workspace for turning open-ended questions into structured, evidence-backed intelligence.**
 
-## What makes this an agent, not a chat wrapper
-- Planner creates subquestions, search queries, source preferences, deliverables and verification rules.
-- Discovery uses provider-native web grounding/browser search when available.
-- Explicit URLs are fetched and parsed into evidence.
-- Local PDF/DOCX/TXT/MD/CSV/JSON/LOG files are ingested.
-- Evidence is persisted per research run with provenance.
-- Synthesis asks the model for structured dataset rows, entities, relationships, evidence, conflicts and limitations.
-- Research history is stored in SQLite.
-- Exports: Markdown, CSV and JSON.
-- Provider settings support Gemini and Groq with runtime verification and model selection.
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi)](https://fastapi.tiangolo.com/)
+[![SQLite](https://img.shields.io/badge/SQLite-Local%20Persistence-003B57?logo=sqlite)](https://www.sqlite.org/)
+[![AI](https://img.shields.io/badge/AI-Gemini%20%7C%20Groq-purple)](#-ai-providers)
+[![License](https://img.shields.io/badge/License-MIT-green)](#-license)
 
-## Current provider integrations
-Gemini supports Google Search grounding through the current Gemini API. Groq uses its OpenAI-compatible APIs; GPT-OSS 20B/120B can use Groq's Responses API browser search. The app falls back to normal model generation for models without browser search.
+---
 
-## Run on Windows PowerShell
-```powershell
-cd "D:\Ddownload\Intelligent_Research_Copilot"
-py -m venv .venv
-Set-ExecutionPolicy -Scope Process Bypass
-.\.venv\Scripts\Activate.ps1
-pip install -r backend\requirements.txt
-python -m uvicorn backend.main:app --reload --host 127.0.0.1 --port 8000
-```
-Open http://127.0.0.1:8000
+## ⚡ What is Intelligent Research Copilot?
 
-## Configure
-Open **Settings**, choose Gemini or Groq, paste your key, choose a model, and click **Verify & Connect**. Keys are stored by this local app in SQLite for the current local installation. Do not commit the database or keys to GitHub.
+**Intelligent Research Copilot** is a local-first AI research and intelligence workspace designed to transform a natural-language research request into an auditable research workflow.
 
-## Example research
-> Find 10 Indian cybersecurity companies working on AI security. For each, identify product focus, founders, public funding information and recent activity. Prefer primary sources, cite evidence, deduplicate companies, and flag conflicting information.
+Instead of simply generating a chatbot answer, the system can:
 
-## Project structure
 ```text
-backend/
-  main.py
-  services/
-    agent.py       # planner + research workflow
-    providers.py   # Gemini/Groq adapters
-    scanner.py     # URL and document ingestion
-    db.py          # SQLite persistence
-frontend/
-  index.html
-  app.js
-  styles.css
-storage/           # local database
- data/uploads/     # local uploaded files
-```
-
-## Security notes
-This is intended for local/authorized research. URL fetching blocks common private/local address ranges. File uploads are limited to common research formats and 20 MB per file. API keys should never be placed in frontend JavaScript or committed to source control.
-
-## Next production hardening
-For public deployment, replace local plaintext key storage with a secrets manager/encrypted vault, add authentication, stronger SSRF/DNS-rebinding protection, background job queues, rate limits, object storage, PostgreSQL, vector retrieval, browser automation with sandboxing, and provider-specific citation normalization.
+RESEARCH QUESTION
+       │
+       ▼
+┌──────────────────┐
+│  RESEARCH PLANNER│
+└────────┬─────────┘
+         │
+         ▼
+┌──────────────────┐
+│ SOURCE DISCOVERY │
+└────────┬─────────┘
+         │
+     ┌───┴──────────────┐
+     ▼                  ▼
+  WEB SOURCES       LOCAL FILES
+     │                  │
+     └───────┬──────────┘
+             ▼
+     ┌───────────────┐
+     │ EVIDENCE      │
+     │ COLLECTION    │
+     └───────┬───────┘
+             ▼
+     ┌───────────────┐
+     │ PROCESSING &  │
+     │ VERIFICATION  │
+     └───────┬───────┘
+             ▼
+     ┌───────────────┐
+     │ STRUCTURED    │
+     │ DATASET       │
+     └───────┬───────┘
+             ▼
+     ┌────────────────┐
+     │ INTELLIGENCE   │
+     │ REPORT         │
+     └───────┬────────┘
+             ▼
+     ┌─────────────────────┐
+     │ SOURCES / EVIDENCE  │
+     │ GRAPH / CSV / JSON   │
+     └─────────────────────┘
