@@ -1,0 +1,123 @@
+﻿# ================================
+# SECRETS / ENVIRONMENT
+# ================================
+
+.env
+.env.*
+!.env.example
+
+*.pem
+*.key
+*.p12
+*.pfx
+secrets.json
+credentials.json
+service-account.json
+
+# API keys / local config
+config.local.*
+settings.local.*
+
+
+# ================================
+# PYTHON
+# ================================
+
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+.venv/
+venv/
+env/
+ENV/
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+*.egg-info/
+dist/
+build/
+
+
+# ================================
+# DATABASE / LOCAL STORAGE
+# ================================
+
+*.db
+*.sqlite
+*.sqlite3
+
+storage/
+data/uploads/
+data/private/
+data/temp/
+
+*.log
+
+
+# ================================
+# USER DATA / RESEARCH DATA
+# ================================
+
+uploads/
+user_data/
+private_data/
+research_data/
+generated_reports/
+reports/
+
+# Don't upload downloaded/source documents
+*.pdf
+*.docx
+*.xlsx
+*.xls
+*.csv
+
+# Exception: allow documentation/submission PDFs if explicitly tracked later
+!docs/*.pdf
+!submission/*.pdf
+
+
+# ================================
+# FRONTEND
+# ================================
+
+node_modules/
+dist/
+.vite/
+.cache/
+
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+
+# ================================
+# OS
+# ================================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ================================
+# EDITORS
+# ================================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+
+# ================================
+# TEMP
+# ================================
+
+*.tmp
+*.temp
+*.bak
+*.backup
