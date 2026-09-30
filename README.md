@@ -1,3 +1,5 @@
+
+
 # 🕵️ Intelligent Research Copilot
 
 > **AI-powered research & intelligence workspace for turning open-ended questions into structured, evidence-backed intelligence.**
@@ -59,6 +61,7 @@ RESEARCH QUESTION
      │ SOURCES / EVIDENCE  │
      │ GRAPH / CSV / JSON   │
      └─────────────────────┘
+```
 
 The idea is simple:
 
@@ -66,7 +69,7 @@ The idea is simple:
 
 ---
 
-# ⚡ What makes it different from a normal chatbot?
+## ⚡ What makes it different from a normal chatbot?
 
 A normal chatbot:
 
@@ -112,9 +115,9 @@ The actual product is the **research workflow around the model**.
 
 ---
 
-# 🔎 Core Capabilities
+## 🔎 Core Capabilities
 
-## 🧠 Research Planner
+### 🧠 Research Planner
 
 Convert a natural-language request into a structured research plan.
 
@@ -129,16 +132,16 @@ The planner can define:
 
 ---
 
-## 🌐 Multi-Source Collection
+### 🌐 Multi-Source Collection
 
 The system can work with:
 
-### Web
+#### Web
 
 * Explicit URLs
 * Provider-native web grounding/search when available
 
-### Local research material
+#### Local research material
 
 * PDF
 * DOCX
@@ -150,7 +153,7 @@ The system can work with:
 
 ---
 
-## 🧾 Evidence & Provenance
+### 🧾 Evidence & Provenance
 
 Research findings can be connected to supporting evidence.
 
@@ -171,7 +174,7 @@ This makes the research process easier to inspect and audit.
 
 ---
 
-## 🧹 Data Processing
+### 🧹 Data Processing
 
 Research results can be transformed into structured information:
 
@@ -185,7 +188,7 @@ Research results can be transformed into structured information:
 
 ---
 
-## 🕸️ Knowledge Graph
+### 🕸️ Knowledge Graph
 
 Research relationships can be represented as connected entities.
 
@@ -207,7 +210,7 @@ Example:
 
 ---
 
-## 📊 Structured Dataset
+### 📊 Structured Dataset
 
 Instead of returning only paragraphs, research can produce structured data.
 
@@ -220,7 +223,7 @@ Example:
 
 ---
 
-## 🕒 Research Activity Timeline
+### 🕒 Research Activity Timeline
 
 A research run can expose stages such as:
 
@@ -244,7 +247,7 @@ COMPLETE
 
 ---
 
-## 🗃️ Research History
+### 🗃️ Research History
 
 Research runs are stored locally using SQLite.
 
@@ -252,7 +255,7 @@ Previous research can be inspected through the workspace.
 
 ---
 
-## 📦 Export
+### 📦 Export
 
 Research results can be exported as:
 
@@ -264,7 +267,7 @@ JSON
 
 ---
 
-# 🤖 AI Providers
+## 🤖 AI Providers
 
 The application supports:
 
@@ -277,7 +280,7 @@ Provider and model selection is available from the application settings.
 
 ---
 
-# 🏗️ Architecture
+## 🏗️ Architecture
 
 ```text
 ┌──────────────────────────────────────────────┐
@@ -324,7 +327,7 @@ Provider and model selection is available from the application settings.
 
 ---
 
-# 📁 Project Structure
+## 📁 Project Structure
 
 ```text
 intelligent-research-copilot/
@@ -356,9 +359,9 @@ intelligent-research-copilot/
 
 ---
 
-# 🚀 Installation — Windows PowerShell
+## 🚀 Installation — Windows PowerShell
 
-## 1. Clone the repository
+### 1. Clone the repository
 
 ```powershell
 git clone https://github.com/Iamhasan69/intelligent-research-copilot.git
@@ -370,7 +373,7 @@ cd intelligent-research-copilot
 
 ---
 
-## 2. Create virtual environment
+### 2. Create virtual environment
 
 ```powershell
 py -m venv .venv
@@ -378,7 +381,7 @@ py -m venv .venv
 
 ---
 
-## 3. Activate virtual environment
+### 3. Activate virtual environment
 
 ```powershell
 Set-ExecutionPolicy -Scope Process Bypass
@@ -396,7 +399,7 @@ You should now see:
 
 ---
 
-## 4. Install dependencies
+### 4. Install dependencies
 
 ```powershell
 python -m pip install --upgrade pip
@@ -408,7 +411,7 @@ pip install -r backend\requirements.txt
 
 ---
 
-# 🔐 Configure API Keys
+## 🔐 Configure API Keys
 
 Create your local `.env`:
 
@@ -432,18 +435,9 @@ HOST=127.0.0.1
 PORT=8000
 ```
 
-```text
-README.md
-frontend/
-HTML
-JavaScript
-GitHub source code
-screenshots
-```
-
 ---
 
-# ▶️ Start the Application
+## ▶️ Start the Application
 
 From the project root:
 
@@ -459,7 +453,7 @@ http://127.0.0.1:8000
 
 ---
 
-# 🩺 Health Check
+## 🩺 Health Check
 
 Open:
 
@@ -471,7 +465,7 @@ This should confirm that the backend is running.
 
 ---
 
-# 🔬 Example Research
+## 🔬 Example Research
 
 Try:
 
@@ -513,7 +507,7 @@ REPORT
 
 ---
 
-# 🎯 Code Cubicle 6.0 — PS-01
+## 🎯 Code Cubicle 6.0 — PS-01
 
 The project is designed around the **AI-Powered Data Intelligence Platform** direction.
 
@@ -529,6 +523,10 @@ The project is designed around the **AI-Powered Data Intelligence Platform** dir
 | Dashboard                      | Research workspace              |
 | History                        | Research history                |
 | Export                         | Markdown / CSV / JSON           |
+
+---
+
+## 🔒 Security Architecture
 
 ```text
 Authentication
@@ -549,7 +547,10 @@ Background Workers
       ↓
 Production Database
 ```
-# ⚠️ Responsible Use
+
+---
+
+## ⚠️ Responsible Use
 
 Use this project only for lawful and authorized research.
 
@@ -566,9 +567,9 @@ Respect privacy, source licenses and applicable policies.
 
 ---
 
-# 🛣️ Roadmap
+## 🛣️ Roadmap
 
-## Current
+### Current
 
 * [x] Research workspace
 * [x] Research planning
@@ -584,7 +585,7 @@ Respect privacy, source licenses and applicable policies.
 * [x] CSV export
 * [x] JSON export
 
-## Future
+### Future
 
 * [ ] Source credibility scoring
 * [ ] Claim-level verification
@@ -600,7 +601,7 @@ Respect privacy, source licenses and applicable policies.
 
 ---
 
-# 🤝 Contributing
+## 🤝 Contributing
 
 ```powershell
 git clone https://github.com/Iamhasan69/intelligent-research-copilot.git
@@ -612,7 +613,9 @@ py -m venv .venv
 pip install -r backend\requirements.txt
 ```
 
-# 👤 Project
+---
+
+## 👤 Project
 
 **Intelligent Research Copilot**
 
@@ -620,22 +623,5 @@ GitHub:
 
 [https://github.com/Iamhasan69/intelligent-research-copilot](https://github.com/Iamhasan69/intelligent-research-copilot)
 
-Flow simply:
 
-```text
-NOTEPAD
-  ↓
-README paste
-  ↓
-Ctrl + S
-  ↓
-POWERSHELL
-  ↓
-git add README.md
-  ↓
-git commit
-  ↓
-git push
-  ↓
-GITHUB
 ```
